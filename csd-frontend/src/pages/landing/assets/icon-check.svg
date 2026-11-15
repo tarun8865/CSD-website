@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="19.9992" height="19.0274" viewBox="0 0 19.9992 19.0274" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group">
+<g id="Group_2">
+<foreignObject x="-20" y="-19.9999" width="59.999" height="59.0273"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(10px);clip-path:url(#bgblur_0_0_4_clip_path);height:100%;width:100%"></div></foreignObject><path id="Union" data-figma-bg-blur-radius="20" d="M14.7793 2.93368L18.0898 3.63485L17.7354 7.00009L19.999 9.51376L17.7354 12.0274L18.0898 15.3927L14.7793 16.0938L13.0898 19.0274L9.99902 17.6456L6.90918 19.0274L5.2207 16.0938L1.90918 15.3927L2.26367 12.0274L0 9.51376L2.26367 7.00009L1.90918 3.63485L5.2207 2.93368L6.90918 8.54135e-05L9.99902 1.38094L13.0898 8.54135e-05L14.7793 2.93368Z" fill="white" fill-opacity="0.4"/>
+</g>
+<path id="Union_2" d="M14.1953 7.32422L10.0029 12.0215L9.17578 12.9482L5.6875 9.46094L6.51758 8.63086L9.12695 11.2412L10.0029 10.2598V10.2588L13.3203 6.54297L14.1953 7.32422Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_0_4_clip_path" transform="translate(20 19.9999)"><path d="M14.7793 2.93368L18.0898 3.63485L17.7354 7.00009L19.999 9.51376L17.7354 12.0274L18.0898 15.3927L14.7793 16.0938L13.0898 19.0274L9.99902 17.6456L6.90918 19.0274L5.2207 16.0938L1.90918 15.3927L2.26367 12.0274L0 9.51376L2.26367 7.00009L1.90918 3.63485L5.2207 2.93368L6.90918 8.54135e-05L9.99902 1.38094L13.0898 8.54135e-05L14.7793 2.93368Z"/>
+</clipPath></defs>
+</svg>

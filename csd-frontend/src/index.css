@@ -1,0 +1,253 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Corfella Phantom';
+  src:
+    local('Corfella Phantom Light Semi Condensed'),
+    local('Corfella Phantom Light SemCond'),
+    local('CorfellaPhantom-LightSemiCond'),
+    url('./assets/fonts/corfella-phantom/CorfellaPhantom-LightSemiCond.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: 50% 125%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Corfella Phantom';
+  src:
+    local('Corfella Phantom Light Semi Condensed'),
+    local('Corfella Phantom Light SemCond'),
+    local('CorfellaPhantom-LightSemiCond'),
+    url('./assets/fonts/corfella-phantom/CorfellaPhantom-LightSemiCond.otf') format('opentype');
+  font-weight: 300 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Corfella Phantom';
+  src:
+    local('Corfella Phantom Bold Semi Condensed'),
+    local('CorfellaPhantom-BoldSemiCond'),
+    url('./assets/fonts/corfella-phantom/CorfellaPhantom-BoldSemiCond.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: 50% 125%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Corfella Phantom';
+  src:
+    local('Corfella Phantom Semi Bold'),
+    local('CorfellaPhantom-SemiBd'),
+    url('./assets/fonts/corfella-phantom/CorfellaPhantom-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Corfella Phantom';
+  src:
+    local('Corfella Phantom Serif Italic Lt'),
+    local('CorfellaItalic-Light'),
+    url('./assets/fonts/corfella-phantom/CorfellaItalic-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Corfella Phantom Light Semi Condensed';
+  src:
+    local('Corfella Phantom Light Semi Condensed'),
+    local('Corfella Phantom Light SemCond'),
+    local('CorfellaPhantom-LightSemiCond'),
+    url('./assets/fonts/corfella-phantom/CorfellaPhantom-LightSemiCond.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Google Sans Flex', sans-serif;
+  --font-display: 'Corfella Phantom', 'Corfella Phantom Light Semi Condensed', Cormorant, 'Iowan Old Style', Palatino, serif;
+  --color-ink: #041538;
+  --color-muted: #616161;
+  --color-aqua: #41dfe2;
+  --color-line: #ebebeb;
+}
+
+html {
+  color-scheme: light;
+  background: #fff;
+  /* Native OS/browser scroll (Google / Microsoft style) — no inertia smoothing */
+  scroll-behavior: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #fff;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  font-stretch: semi-condensed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Outer box is the 1440px Figma frame plus the 64px padding cap on each side. */
+@utility landing-container {
+  width: 100%;
+  max-width: calc(1440px + 2 * 64px);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 64px);
+  container-type: inline-size;
+}
+
+/* Section offsets sit outside the container, so they track the viewport and stop
+   growing once the container has reached its maximum width (1568px). */
+@utility section-space-sm {
+  margin-top: clamp(40px, 5.1vw, 80px);
+}
+
+@utility section-space {
+  margin-top: clamp(64px, 7.65vw, 120px);
+}
+
+@utility section-space-lg {
+  margin-top: clamp(96px, 12.76vw, 200px);
+}
+
+@utility type-hero {
+  font-size: clamp(40px, 5.56cqi, 80px);
+}
+
+@utility type-section {
+  font-size: clamp(36px, 3.33cqi, 48px);
+}
+
+@utility type-lead {
+  font-size: clamp(26px, 2.5cqi, 36px);
+}
+
+@utility type-service {
+  font-size: clamp(24px, 2.22cqi, 32px);
+}
+
+@utility type-title {
+  font-size: clamp(18px, 1.39cqi, 20px);
+}
+
+@utility type-block {
+  font-size: clamp(22px, 1.94cqi, 28px);
+}
+
+@utility measure-hero {
+  max-width: min(100%, max(26rem, 75.83cqi));
+}
+
+@utility measure-copy {
+  max-width: min(100%, max(26rem, 66.11cqi));
+}
+
+@utility measure-about {
+  max-width: min(100%, max(36rem, 83.06cqi));
+}
+
+@utility measure-heading {
+  max-width: min(100%, max(20rem, 49.17cqi));
+}
+
+@utility measure-heading-sm {
+  max-width: min(100%, max(20rem, 43.47cqi));
+}
+
+@utility mt-stack {
+  margin-top: clamp(48px, 5.56cqi, 80px);
+}
+
+@utility h-control {
+  height: clamp(52px, 4.17cqi, 60px);
+}
+
+@utility size-control {
+  width: clamp(44px, 3.61cqi, 52px);
+  height: clamp(44px, 3.61cqi, 52px);
+}
+
+@keyframes trusted-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility trusted-marquee {
+  animation: trusted-marquee 32s linear infinite;
+}
+
+/* Horizontal sweep: left → right → left */
+@keyframes hero-glow-drift {
+  0%,
+  100% {
+    transform: translate3d(-6%, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(6%, 0, 0);
+  }
+}
+
+@utility hero-glow-drift {
+  animation: hero-glow-drift 16s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow-drift {
+    animation: none;
+    transform: none;
+  }
+}
+
+@keyframes wa-ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+
+  70% {
+    opacity: 0.12;
+  }
+
+  100% {
+    transform: scale(1.85);
+    opacity: 0;
+  }
+}
+
+.wa-ripple {
+  border: 1.5px solid rgb(18 140 70 / 0.65);
+  background: rgb(18 140 70 / 0.2);
+  box-shadow: 0 0 12px rgb(18 140 70 / 0.28);
+  animation: wa-ripple 2.7s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-ripple {
+    animation: none;
+    opacity: 0;
+  }
+}

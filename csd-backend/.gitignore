@@ -1,0 +1,29 @@
+# Binaries and build artifacts
+/bin/
+/dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+server
+
+# Environment configuration
+.env
+!.env.example
+
+# IDE & OS specific files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Go vendor directory (if used)
+vendor/
+
+# Temporary and log files
+*.log
+tmp/
