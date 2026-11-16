@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, type FormEvent, type ReactNode } from 'react'
-import { submitContactForm } from '../../../services/api'
+import { sendContactEmail } from '../../../services/emailjs'
 import talkWash from '../assets/talk-wash.png'
 import talkDivider from '../assets/talk-divider.svg'
 import talkLineLeft from '../assets/talk-line-left.svg'
@@ -144,7 +144,7 @@ export default function TalkSection() {
 
     setStatus('submitting')
 
-    const res = await submitContactForm({
+    const res = await sendContactEmail({
       name: formData.name.trim(),
       email: formData.email.trim(),
       phone: formData.phone.trim(),
@@ -156,8 +156,7 @@ export default function TalkSection() {
     if (res.success) {
       setStatus('success')
       setSuccessMessage(
-        res.data?.message ||
-          'Thank you for reaching out to CSD Consulting! Your enquiry has been received and our team will get back to you shortly.',
+        'Thank you for contacting CSD Corporate Consulting. Your enquiry has been submitted successfully.',
       )
       setFormData({
         name: '',
@@ -172,7 +171,7 @@ export default function TalkSection() {
       setStatus('error')
       setErrorMessage(
         res.error?.message ||
-          'Unable to submit your enquiry at this time. Please try again or write to us directly at mayank@csd-india.com.',
+          'Unable to submit your enquiry right now. Please try again later.',
       )
     }
   }
@@ -566,7 +565,7 @@ export default function TalkSection() {
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
                     </svg>
-                    Submitting Enquiry...
+                    Sending...
                   </span>
                 ) : (
                   'Submit Your Enquiry'
